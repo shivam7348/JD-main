@@ -25,6 +25,7 @@ import Laboratory from "./components/Pages/InfraStructure/Laboratory";
 import SmartClasses from "./components/Pages/InfraStructure/SmartClasses";
 import SportsGround from "./components/Pages/InfraStructure/SportsGround";
 import Library from "./components/Pages/InfraStructure/Library";
+import RulesAndTransport from "./components/Pages/SessionInformation/RulesAndTransport";
 
 
 

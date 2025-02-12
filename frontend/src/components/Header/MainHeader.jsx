@@ -56,7 +56,6 @@ const Header = () => {
             {/* Academic Zone Dropdown */}
             <NavDropdown title="ACADEMIC ZONE" items={[
               { to: "/academic-zone/activities", label: "ACTIVITIES" },
-              { to: "/academic-zone/tc-enquiry", label: "TC ENQUIRY" },
               { to: "/academic-zone/annual-planner", label: "ANNUAL PLANNER" },
               { to: "/academic-zone/exam-schedule", label: "EXAMINATION SCHEDULE" }
             ]} />

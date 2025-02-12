@@ -8,7 +8,7 @@ const AutoSlider = () => {
   const slides = [
     {
       url: slider1,
-      title: "Birthday Celebrations",
+      title: "Schhol Celebrations",
       description: "Celebrate your special day with us! Enjoy exclusive discounts and offers.",
       heading: "Join the Party!",
       advertising: "Book now and get 20% off on birthday packages!"

@@ -12,13 +12,11 @@ import Mission from "./src/components/Pages/About/Mission";
 import Admission from "./src/components/Pages/About/Admission";
 import AcademicZone from "./src/components/Pages/AcedmicZone/AcademicZone";
 import Activities from "./src/components/Pages/AcedmicZone/Activities";
-import TCEnquiry from "./src/components/Pages/AcedmicZone/TCEnquiry";
 import AnnualPlanner from "./src/components/Pages/AcedmicZone/AnnualPlanner";
 import ExaminationSchedule from "./src/components/Pages/AcedmicZone/ExaminationSchedule";
 import SessionInformation from "./src/components/Pages/SessionInformation/SessionInformation";
 import SchoolTimimng from "./src/components/Pages/SessionInformation/SchoolTimimng";
 import FreeRegualation from "./src/components/Pages/SessionInformation/FreeRegualation";
-import RuleOfCodeAndConduct from "./src/components/Pages/SessionInformation/RuleOfCodeAndConduct";
 import Infrastructure from "./src/components/Pages/InfraStructure/Infrastructure";
 import TransportFacility from "./src/components/Pages/InfraStructure/TransportFacility";
 import SchoolCampus from "./src/components/Pages/InfraStructure/SchoolCampus";
@@ -26,6 +24,7 @@ import Laboratory from "./src/components/Pages/InfraStructure/Laboratory";
 import SmartClasses from "./src/components/Pages/InfraStructure/SmartClasses";
 import SportsGround from "./src/components/Pages/InfraStructure/SportsGround";
 import Library from "./src/components/Pages/InfraStructure/Library";
+import RulesAndTransport from "./src/components/Pages/SessionInformation/RulesAndTransport";
 
 
 
@@ -59,7 +58,6 @@ const router = createBrowserRouter([
       },
       // acdemice nested routes 
       { path: "/academic-zone/activities", element: <Activities /> },
-      { path: "/academic-zone/tc-enquiry", element: <TCEnquiry /> },
       { path: "/academic-zone/annual-planner", element: <AnnualPlanner /> },
       { path: "/academic-zone/exam-schedule", element: <ExaminationSchedule /> },
       // sessional routes start
@@ -67,7 +65,7 @@ const router = createBrowserRouter([
       //nested routes
       { path: "/sessioni-info/schooltiming", element: <SchoolTimimng /> },
       { path: "/sessioni-info/freeregulation", element: <FreeRegualation /> },
-      { path: "/sessioni-info/rulecode-condt", element: <RuleOfCodeAndConduct /> },
+      { path: "/sessioni-info/rulecode-condt", element: <RulesAndTransport /> },
       // infrastructure dropdown started 
       { path: "/infrastructure", element: <Infrastructure /> },
       // nested routes of infrastructure

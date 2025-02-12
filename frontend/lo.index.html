@@ -1,0 +1,77 @@
+import { useState } from "react";
+import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaQuestionCircle } from "react-icons/fa";
+
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="bg-gray-100 shadow-md">
+      {/* Top Header */}
+      <div className="hidden lg:flex justify-between items-center px-8 py-2 text-gray-700 text-sm bg-gray-200">
+        <div className="flex items-center gap-2">
+          <FaEnvelope />
+          <span>jdglobal.school@gmail.com</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <FaPhoneAlt />
+          <span>📞 9555744337</span>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <div className="flex justify-between items-center px-6 py-3">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="images/logo.jpeg" alt="Logo" className="h-20 w-auto" />
+          <h1 className="text-3xl font-semibold text-red-800 ml-3">J.D GLOBAL SCHOOL</h1>
+        </div>
+
+        {/* Right Section */}
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-2 text-blue-600">
+            <FaQuestionCircle />
+            <span className="text-gray-700">Need Help? Call us</span>
+            <a href="tel://9555744337" className="text-gray-900 font-semibold">9555744337</a>
+          </div>
+          <a href="admission.php" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+            ADMISSION
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Navigation Menu */}
+      <nav className={`md:flex ${menuOpen ? "block" : "hidden"} bg-white`}>
+        <ul className="flex flex-col md:flex-row md:items-center md:gap-6 px-6 md:px-10 py-4 text-lg">
+          <li><a href="index.php" className="hover:text-blue-600">Home</a></li>
+          <li className="group relative">
+            <a href="about.php" className="hover:text-blue-600">About Us</a>
+            <ul className="absolute hidden group-hover:block bg-white shadow-md p-2 space-y-1">
+              <li><a href="message.php" className="hover:text-blue-600">Director’s Message</a></li>
+              <li><a href="vission.php" className="hover:text-blue-600">Vision</a></li>
+              <li><a href="mission.php" className="hover:text-blue-600">Mission</a></li>
+            </ul>
+          </li>
+          <li><a href="admission.php" className="hover:text-blue-600">Admission</a></li>
+          <li className="group relative">
+            <a href="index.php" className="hover:text-blue-600">Academic Zone</a>
+            <ul className="absolute hidden group-hover:block bg-white shadow-md p-2 space-y-1">
+              <li><a href="activities.php" className="hover:text-blue-600">Activities</a></li>
+              <li><a href="message.php" className="hover:text-blue-600">TC Enquiry</a></li>
+              <li><a href="message.php" className="hover:text-blue-600">Annual Planner</a></li>
+              <li><a href="message.php" className="hover:text-blue-600">Examination Schedule</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.php" className="hover:text-blue-600">Gallery</a></li>
+          <li><a href="Contact.php" className="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

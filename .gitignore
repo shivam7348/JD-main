@@ -1,0 +1,65 @@
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore Node.js dependencies (for both frontend and backend)
+node_modules/
+
+# Ignore build/output directories
+dist/
+build/
+out/
+
+# Ignore environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore dependency caches
+.npm/
+.yarn/
+.pnp/
+
+# Ignore cache directories
+.cache/
+
+# Ignore debug files
+*.debug
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore compiled files (e.g., for TypeScript or Python)
+*.js.map
+*.css.map
+*.pyc
+__pycache__/
+
+# Ignore coverage reports
+coverage/
+.nyc_output/
+
+# Ignore package-lock files (optional, depending on your workflow)
+package-lock.json
+yarn.lock
+
+# Ignore backend-specific files (e.g., for Python, Java, etc.)
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore frontend-specific files (e.g., for React, Angular, etc.)
+.next/
+.nuxt/
+.cache/

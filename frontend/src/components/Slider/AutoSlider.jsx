@@ -1,18 +1,39 @@
 import { useState, useEffect } from "react";
-import slider1 from '../Slider/sliderImg/slider1.jpg'
-import slider2 from '../Slider/sliderImg/slider2.jpeg'
-import slider3 from '../Slider/sliderImg/slider3.jpg'
-import slider4 from '../Slider/sliderImg/slider4.jpeg'
-
-
+import slider1 from '../Slider/sliderImg/slider1.jpg';
+import slider2 from '../Slider/sliderImg/slider2.jpeg';
+import slider3 from '../Slider/sliderImg/slider3.jpg';
+import slider4 from '../Slider/sliderImg/slider4.jpeg';
 
 const AutoSlider = () => {
   const slides = [
-    { url: slider1, title: "Birthday Celebrations" },
-    { url: slider2, title: "Birthday Celebrations" },
-    { url: slider3, title: "Birthday Celebrations" },
-    { url: slider4, title: "Birthday Celebrations" },
- 
+    {
+      url: slider1,
+      title: "Birthday Celebrations",
+      description: "Celebrate your special day with us! Enjoy exclusive discounts and offers.",
+      heading: "Join the Party!",
+      advertising: "Book now and get 20% off on birthday packages!"
+    },
+    {
+      url: slider2,
+      title: "Corporate Events",
+      description: "Host your corporate events with us. We provide world-class facilities.",
+      heading: "Professional Excellence",
+      advertising: "Special corporate discounts available!"
+    },
+    {
+      url: slider3,
+      title: "Wedding Receptions",
+      description: "Make your wedding day unforgettable with our luxurious venues.",
+      heading: "Dream Weddings",
+      advertising: "Custom wedding packages starting at $5000!"
+    },
+    {
+      url: slider4,
+      title: "Anniversary Parties",
+      description: "Celebrate your love story with us. We offer personalized anniversary packages.",
+      heading: "Celebrate Love",
+      advertising: "Complimentary champagne for anniversary bookings!"
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +44,6 @@ const AutoSlider = () => {
     if (!isTransitioning && index !== currentIndex) {
       setIsTransitioning(true);
       setCurrentIndex(index);
-      // Reset transition state after animation completes
       setTimeout(() => setIsTransitioning(false), 750);
     }
   };
@@ -81,11 +101,13 @@ const AutoSlider = () => {
                 className="w-full h-full object-cover"
                 alt={slide.title}
               />
-              {/* Caption overlay */}
+              {/* Caption Overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                 <h3 className="text-white text-xl font-semibold">
-                  {slide.title}
+                  {slide.heading}
                 </h3>
+                <p className="text-white text-sm mt-2">{slide.description}</p>
+                <p className="text-white text-xs mt-1 italic">{slide.advertising}</p>
               </div>
             </div>
           ))}

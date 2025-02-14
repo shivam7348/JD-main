@@ -44,7 +44,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/api/admin/login`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/admin/login`,
         {
           username,
           password,
@@ -53,7 +53,7 @@ const Login = () => {
       );
 
       if (response.status === 200) {
-        const { adminToken, adminUser } = response.data; 
+        const { adminToken, adminUser } = response.data;
         dispatch(login({ adminToken, adminUser }));
 
         toast.success("Login successful!");

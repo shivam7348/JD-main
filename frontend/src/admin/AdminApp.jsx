@@ -18,6 +18,7 @@ import {
   selectCheckAuthentication,
 } from "../store/admin/adminAuthSlice";
 import Layout from "../../Layout";
+import DefaultLayouAdminWithTitle from "../utils/DefaultLayouAdminWithTitle";
 
 const Login = React.lazy(() => import("./views/pages/login/Login"));
 const Register = React.lazy(() => import("./views/pages/register/Register"));

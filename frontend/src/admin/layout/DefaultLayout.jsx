@@ -1,9 +1,7 @@
 import React from "react";
-import AppSidebar from "../../component/admin/AppSidebar";
-import { AppFooter, AppHeader } from "../../component/admin";
-import AppContent from "../../component/admin/AppContent";
 import { useSelector } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
+import { AppContent, AppFooter, AppHeader, AppSidebar } from "../../components/admin";
 
 const DefaultLayout = () => {
   const sidebarShow = useSelector((state) => state.adminApp.sidebarShow);

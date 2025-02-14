@@ -37,7 +37,7 @@ const VideoFeatureSection = () => {
           <div className="lg:w-5/12 lg:order-last lg:ml-[8.333%]">
             <div className="feature pt-20">
               <div className="feature-title mb-8">
-                <h3 className="text-3xl font-bold text-white">Our Facilities</h3>
+                <h3 className="text-3xl font-bold text-black">Our Facilities</h3>
               </div>
               <ul className="space-y-8">
                 {features.map((feature) => (
@@ -45,10 +45,10 @@ const VideoFeatureSection = () => {
                     <div className="singel-feature flex items-start">
                       <div className="icon mr-6">{feature.icon}</div>
                       <div className="cont flex-1">
-                        <h4 className="text-xl font-semibold text-white mb-2">
+                        <h4 className="text-xl font-semibold text-black mb-2">
                           {feature.title}
                         </h4>
-                        <p className="text-gray-200">{feature.description}</p>
+                        <p className="text-gray-800">{feature.description}</p>
                       </div>
                     </div>
                   </li>

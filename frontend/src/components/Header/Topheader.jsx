@@ -1,25 +1,29 @@
-import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaBullhorn } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 
 const TopHeader = () => {
   return (
     <header className="bg-blue-800 text-white p-2">
-      <div className="flex flex-wrap items-center justify-center md:justify-between px-4 text-center">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-8 px-4 text-center">
         
         {/* Address Section */}
-        <div className="flex items-center space-x-2 text-sm md:text-base md:w-1/2 justify-center md:justify-start">
+        <div className="flex items-center space-x-2 text-sm md:text-base">
           <FaMapMarkerAlt className="h-5 w-5 text-red-400" />
           <div className="p-1">
-            <Marquee speed={50} gradient={false} pauseOnHover={true}>
+           
               226, Sai Enclave, Nandgram, Opp. KM Residency, Raj Nagar Extn, Ghaziabad-201003
-            </Marquee>
+           
           </div>
         </div>
 
-        {/* Email Section */}
-        <div className="flex items-center space-x-2 mt-2 md:mt-0 md:w-1/2 justify-center md:justify-end">
-          <FaEnvelope className="h-6 w-6 cursor-pointer text-blue-300 hover:text-blue-400" />
-          <span className="text-sm md:text-base">jdglobal.school@gmail.com</span>
+        {/* Announcement Section */}
+        <div className="flex items-center space-x-2 text-sm md:text-base">
+          <FaBullhorn className="h-5 w-5 text-yellow-400" />
+          <div className="p-1">
+            <Marquee speed={50} gradient={false} pauseOnHover={true}>
+              🚨 Announcement: Admission Open! 🚨
+            </Marquee>
+          </div>
         </div>
 
       </div>

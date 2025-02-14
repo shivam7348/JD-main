@@ -26,6 +26,7 @@ import SmartClasses from "./components/Pages/InfraStructure/SmartClasses";
 import SportsGround from "./components/Pages/InfraStructure/SportsGround";
 import Library from "./components/Pages/InfraStructure/Library";
 import RulesAndTransport from "./components/Pages/SessionInformation/RulesAndTransport";
+import AdmissionPage from "./components/Pages/AdmissionPage"
 
 
 
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
       {
         path: "academic-zone",
         element: <AcademicZone />
+      },
+      {
+        path: "admissionopen",
+        element: <AdmissionPage/>
+
       },
       // acdemice nested routes 
       { path: "/academic-zone/activities", element: <Activities /> },

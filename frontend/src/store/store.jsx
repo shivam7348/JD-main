@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import adminAppSlice from "./admin/adminAppSlice.js";
 import adminAuthSlice from "./admin/adminAuthSlice.js";
 
-const pressReleaseStore = configureStore({
+const jdSchoolStore = configureStore({
   reducer: {
     adminApp: adminAppSlice,
     adminAuth: adminAuthSlice,
@@ -15,4 +15,4 @@ const pressReleaseStore = configureStore({
     }),
 });
 
-export default pressReleaseStore;
+export default jdSchoolStore;

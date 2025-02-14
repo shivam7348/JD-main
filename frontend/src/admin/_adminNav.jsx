@@ -23,13 +23,13 @@ const _adminNav = [
 
   {
     component: CNavGroup,
-    name: "Members",
+    name: "Annual Planner",
     to: "/admin/members",
     icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: "Members",
+        name: "Annual Planner",
         to: "/admin/members",
       },
     ],
@@ -37,41 +37,16 @@ const _adminNav = [
 
   {
     component: CNavGroup,
-    name: "Press Release",
+    name: "Activities",
     to: "/admin/press-release",
     icon: <CIcon icon={cilNewspaper} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: "Add Post",
+        name: "Add Activities",
         to: "/admin/press-release/add-post",
       },
-
-      {
-        component: CNavItem,
-        name: "Approved Post",
-        to: "/admin/press-release/approved",
-      },
-      {
-        component: CNavItem,
-        name: " Waiting For Approval",
-        to: "/admin/press-release/unapproved",
-      },
-      {
-        component: CNavItem,
-        name: "Rejected Post",
-        to: "/admin/press-release/rejected",
-      },
-      {
-        component: CNavItem,
-        name: "Drafted Post",
-        to: "/admin/press-release/draft",
-      },
-      {
-        component: CNavItem,
-        name: "Deleted Post",
-        to: "/admin/press-release/deleted",
-      },
+  
       // {
       //   component: CNavItem,
       //   name: "Analytics",
@@ -81,20 +56,20 @@ const _adminNav = [
   },
   {
     component: CNavGroup,
-    name: "Ads",
+    name: "Marque",
     to: "/admin/ads",
     icon: <CIcon icon={cilMoney} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: "Create Ads",
+        name: "Create marque",
         to: "/admin/ads/createAds",
       },
-      {
-        component: CNavItem,
-        name: "Manage Ads",
-        to: "/admin/ads/manage-ads",
-      },
+      // {
+      //   component: CNavItem,
+      //   name: "Manage Ads",
+      //   to: "/admin/ads/manage-ads",
+      // },
     ],
   },
 

@@ -32,7 +32,7 @@ const Members = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/api/getUser`,
+        `${process.env.VITE_BACKEND_URL}/api/getUser`,
         {
           params: {
             page: currentPage,

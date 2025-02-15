@@ -4,14 +4,17 @@ import TopHeader from "./src/components/Header/Topheader";
 import MainHeader from "./src/components/Header/MainHeader";
 import Footer from "./src/components/Footer/Footer";
 import MiddleHeader from "./src/components/Header/MiddleHeader";
+import Header from "./src/components/Header/Header";
 
 
 function Layout() {
   return (
     <>
-      <TopHeader />
+      {/* <TopHeader /> 
       <MiddleHeader/>
-      <MainHeader />
+      <MainHeader /> */}
+      <Header/>
+
       <Outlet />
       <Footer/>
     </>

@@ -29,7 +29,7 @@ const VideoFeatureSection = () => {
   return (
     <section
       id="video-feature"
-      className="bg-cover bg-center pt-[60px] pb-[110px]"
+      className="bg-cover bg-center pt-[5px] pb-[10px]"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">

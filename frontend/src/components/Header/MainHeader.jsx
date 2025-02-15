@@ -5,16 +5,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="shadow-md sticky top-0 bg-white z-50">
-      <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
-        {/* Logo Section */}
-        {/* <Link to="/" className="text-xl font-bold text-red-800">
-          Logo
-        </Link> */}
-
+    <header className="shadow-md  mx-auto sticky top-0  bg-white z-50 border-b border-gray-200">
+      <div className=" mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-xl p-2"
+          className="md:hidden text-xl p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -39,7 +34,7 @@ const Header = () => {
         <nav
           className={`absolute md:static left-0 right-0 top-full w-full md:w-auto bg-white md:bg-transparent ${
             menuOpen ? "block" : "hidden"
-          } md:block shadow-lg md:shadow-none`}
+          } md:block shadow-lg md:shadow-none transition-opacity duration-300`}
         >
           <ul className="md:flex md:items-center text-sm md:text-base font-semibold divide-y md:divide-y-0 divide-gray-100">
             <NavItem to="/">HOME</NavItem>
@@ -91,7 +86,7 @@ const NavItem = ({ to, children }) => (
   <li className="md:mx-2">
     <Link
       to={to}
-      className="block px-4 py-3 md:py-2 hover:text-yellow-500 transition-colors duration-200"
+      className="block px-4 text-sm py-3 md:py-2 hover:text-yellow-500 transition-colors duration-200 rounded-md hover:bg-gray-100"
     >
       {children}
     </Link>
@@ -104,7 +99,7 @@ const NavDropdown = ({ title, items }) => {
   return (
     <li className="relative group md:mx-2">
       <button
-        className="w-full text-left px-4 py-3 md:py-2 hover:text-yellow-500 transition-colors duration-200 flex justify-between items-center"
+        className="w-full text-left px-2 py-2 md:py-1 text-sm hover:text-green-500 transition-colors duration-200 flex justify-between items-center rounded-md hover:bg-gray-100"
         onClick={() => setIsOpen(!isOpen)}
       >
         {title}
@@ -127,17 +122,20 @@ const NavDropdown = ({ title, items }) => {
         className={`
           md:absolute md:left-0 md:top-full 
           bg-gray-50 md:bg-white 
+          text-sm
           md:shadow-lg 
           md:min-w-[200px]
+           
           md:hidden md:group-hover:block
           ${isOpen ? "block" : "hidden"}
+          border border-gray-200 rounded-md
         `}
       >
         {items.map((item) => (
           <li key={item.to}>
             <Link
               to={item.to}
-              className="block px-6 py-2 hover:bg-gray-100 hover:text-yellow-500 transition-colors duration-200 whitespace-nowrap"
+              className="block px-2 py-2   hover:bg-gray-100 hover:text-yellow-500 transition-colors duration-200 whitespace-nowrap"
             >
               {item.label}
             </Link>

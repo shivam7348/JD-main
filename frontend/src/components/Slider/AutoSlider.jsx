@@ -70,7 +70,7 @@ const AutoSlider = () => {
 
   return (
     <div
-      className="w-full flex items-center justify-center p-4 relative z-0"
+      className="w-full flex items-center justify-center p-2 relative z-0 "
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"

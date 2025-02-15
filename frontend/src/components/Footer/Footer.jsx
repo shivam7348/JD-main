@@ -1,10 +1,13 @@
 import { MdAttachEmail } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
+import FloatingButtons from "./FloatingButtons";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-6">
+   <>
+     <footer className="bg-gray-800 text-white p-6">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-20">
           <img src="https://jdglobalschool.in/images/logo1.png" alt="" />
@@ -39,6 +42,9 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    <FloatingButtons />
+    <ScrollToTopButton />
+   </>
   );
 };
 

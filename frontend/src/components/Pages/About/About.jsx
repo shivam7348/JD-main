@@ -42,7 +42,7 @@ const AboutUs = () => {
       </section> */}
 
       {/* About Us */}
-      <section  className="pt-16 pb-6 px-6 lg:px-0">
+      <section  className="pt-10 pb-6 px-6 lg:px-0">
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
           <div className="lg:w-2/3">
             <div className="section-title mb-8">
@@ -85,6 +85,9 @@ const AboutUs = () => {
                   students. After all, the aim of education is to create good
                   human beings.
                 </li>
+                <button className="bg-yellow-500 rounded py-2 px-2">
+          Read More
+      </button>
               </ul>
             </div>
           </div>
@@ -94,12 +97,11 @@ const AboutUs = () => {
               alt="About JD Global School"
               className="w-full rounded-lg shadow-md"
             />
+          
           </div>
          
         </div>
-        <button className="">
-          Read More
-      </button>
+        
       </section>
       
 

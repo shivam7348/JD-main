@@ -6,58 +6,62 @@ import 'swiper/css/pagination';
 
 const testimonials = [
   {
-    id: 1,
-    text: "It's one of my favorite seasons of the year: Back to School. As a kid, I loved fresh school supplies, new outfits, the change of seasons, and the chance to crack open a new book.",
-    author: "Sachin Sharma",
+    img: "https://jdglobalschool.in/images/teachers/rachna.png",
+    quote:
+      "Let us remember: One book, one pen, one child and one teacher can change the world.",
+    name: "Rohit Sharma",
+    designation: "Bsc, Engineering",
   },
   {
-    id: 2,
-    text: "Education is the most powerful weapon which you can use to change the world.",
-    author: "Nelson Mandela",
+    img: "https://jdglobalschool.in/images/teachers/rachna.png",
+    quote:
+      "It’s one of my favorite seasons of the year: Back to School. As a kid, I loved fresh school supplies, new outfits, the change of seasons, and the chance to crack open a new textbook.",
+    name: "Sanjana Shegal",
+    designation: "Bsc, Engineering",
   },
   {
-    id: 3,
-    text: "The beautiful thing about learning is that no one can take it away from you.",
-    author: "B.B. King",
+    img: "https://jdglobalschool.in/images/teachers/rachna.png",
+    quote: "This is a new year. A new beginning. And things will change.",
+    name: "Sachin Sharma",
+    designation: "Bsc, Engineering",
   },
 ];
 
+
 const Testimonials = () => {
   return (
-    <div 
-      className="py-16 bg-cover bg-center relative"
-      style={{ 
-        backgroundImage: "url('https://jdglobalschool.in/images/course/cu-2.jpg')", 
-        minHeight: "80vh", 
-        width: "100%", 
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
-        backgroundBlendMode: "overlay" 
-      }}
-    >
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-6">Testimonials</h2>
-        <p className="text-lg text-center text-gray-300 mb-10">What they say</p>
-
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={30}
-          slidesPerView={1}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation
-          loop
-        >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
-              <div className="max-w-lg mx-auto bg-white bg-opacity-95 rounded-2xl shadow-xl p-8 text-center border border-gray-300 transform hover:scale-105 transition-transform duration-300">
-                <p className="text-lg text-gray-700 italic mb-4">"{testimonial.text}"</p>
-                <p className="text-xl font-semibold text-gray-900">{testimonial.author}</p>
+    <section
+    id="testimonial"
+    className="relative py-28 bg-fit bg-center text-white"
+    style={{ backgroundImage: "url(images)", }}
+  >
+    <div className="absolute inset-0  bg-opacity-50"></div>
+    <div className="container mx-auto relative z-10 px-6">
+      <div className="max-w-2xl">
+        <h5 className="text-lg font-semibold text-gray-300">Testimonial</h5>
+        <h2 className="text-4xl font-bold text-white">What they say</h2>
+      </div>
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-gray-800">
+            <div className="flex items-center mb-4">
+              <img
+                src={testimonial.img}
+                alt="Testimonial"
+                className="w-16 h-16 rounded-full object-cover border-2 border-gray-300"
+              />
+              <div className="ml-4">
+                <h6 className="text-lg font-semibold">{testimonial.name}</h6>
+                <span className="text-sm text-gray-500">{testimonial.designation}</span>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+            <p className="italic text-gray-700">“{testimonial.quote}”</p>
+          </div>
+        ))}
       </div>
     </div>
+  </section>
+
   );
 };
 

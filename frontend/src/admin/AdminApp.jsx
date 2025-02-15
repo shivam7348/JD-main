@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { CSpinner } from "@coreui/react";
 import "./scss/style.scss";
 import "react-toastify/dist/ReactToastify.css";
-import "../index.css";
+// import "../index.css";
 import {
   login,
   logout,

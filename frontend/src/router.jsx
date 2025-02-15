@@ -19,13 +19,14 @@ import SessionInformation from "./components/Pages/SessionInformation/SessionInf
 import SchoolTimimng from "./components/Pages/SessionInformation/SchoolTimimng";
 import FreeRegualation from "./components/Pages/SessionInformation/FreeRegualation";
 import Infrastructure from "./components/Pages/InfraStructure/Infrastructure";
-import TransportFacility from "./components/Pages/InfraStructure/TransportFacility";
+import TransportFacility from "./components/Pages/InfraStructure/SchoolTransport";
 import SchoolCampus from "./components/Pages/InfraStructure/SchoolCampus";
 import Laboratory from "./components/Pages/InfraStructure/Laboratory";
 import SmartClasses from "./components/Pages/InfraStructure/SmartClasses";
 import SportsGround from "./components/Pages/InfraStructure/SportsGround";
 import Library from "./components/Pages/InfraStructure/Library";
 import RulesAndTransport from "./components/Pages/SessionInformation/RulesAndTransport";
+import SchoolTransport from "./components/Pages/InfraStructure/SchoolTransport";
 
 
 
@@ -45,33 +46,39 @@ const router = createBrowserRouter([
       },
       {
         path: "about/message",
-        element: <DirectorMessage />
+        element: <DirectorMessage />,
       },
       { path: "/about/vision", element: <Vission /> },
       { path: "/about/mission", element: <Mission /> },
       {
         path: "admission",
-        element: <Admission />
+        element: <Admission />,
       },
 
       {
         path: "academic-zone",
-        element: <AcademicZone />
+        element: <AcademicZone />,
       },
-      // acdemice nested routes 
+      // acdemice nested routes
       { path: "/academic-zone/activities", element: <Activities /> },
       { path: "/academic-zone/annual-planner", element: <AnnualPlanner /> },
-      { path: "/academic-zone/exam-schedule", element: <ExaminationSchedule /> },
+      {
+        path: "/academic-zone/exam-schedule",
+        element: <ExaminationSchedule />,
+      },
       // sessional routes start
       { path: "/sessioni-info", element: <SessionInformation /> },
       //nested routes
       { path: "/sessioni-info/schooltiming", element: <SchoolTimimng /> },
       { path: "/sessioni-info/freeregulation", element: <FreeRegualation /> },
       { path: "/sessioni-info/rulecode-condt", element: <RulesAndTransport /> },
-      // infrastructure dropdown started 
+      // infrastructure dropdown started
       { path: "/infrastructure", element: <Infrastructure /> },
       // nested routes of infrastructure
-      { path: "/infrastructure/transport-facilities", element: <TransportFacility /> },
+      {
+        path: "/infrastructure/transport-facilities",
+        element: <SchoolTransport />,
+      },
       { path: "/infrastructure/schoolcampus", element: <SchoolCampus /> },
       { path: "/infrastructure/laboratory", element: <Laboratory /> },
       { path: "/Infrastructure/smartclasses", element: <SmartClasses /> },
@@ -89,14 +96,11 @@ const router = createBrowserRouter([
         path: "gallery",
         element: <Gallery />,
       },
-      // service router 
+      // service router
       {
         path: "/service/1",
         element: <Services />,
       },
-
-
-
     ],
   },
 ]);

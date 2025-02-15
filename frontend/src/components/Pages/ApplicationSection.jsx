@@ -2,7 +2,7 @@
 const ApplicationSection = () => {
   return (
     <div className="container mx-auto p-4">
-      <div className="flex flex-wrap gap-6">
+      <div className="flex flex-wrap gap-6 mx-15">
         {/* Apply for Fall Section */}
         <div className="flex-1 bg-blue-100 p-6 rounded-lg shadow-md min-w-[300px]">
           <h2 className="text-2xl font-bold text-blue-800 mb-4">Apply for Fall</h2>

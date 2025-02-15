@@ -42,11 +42,11 @@ const AboutUs = () => {
       </section> */}
 
       {/* About Us */}
-      <section  className="pt-16 pb-6 px-6 lg:px-0">
+      <section className="pt-16 pb-6 px-6 lg:px-0">
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
-          <div className="lg:w-2/3">
-            <div className="section-title mb-8">
-              <h3 className="text-3xl font-semibold">About us</h3>
+          <div className="lg:w-2/3 mx-15">
+            <div className="section-title mb-8 ">
+              <h3 className="text-3xl font-semibold ">About us</h3>
               <h5 className="pt-2 text-xl font-medium text-green-500">
                 WELCOME TO J.D GLOBAL SCHOOL
               </h5>
@@ -61,15 +61,15 @@ const AboutUs = () => {
                 <li>
                   Established in 2018, under the aegis of Leading Business
                   Houses, JD Global School, Ghaziabad is a CBSE affiliated,
-                  Progressive school. Within a short span, this accredited school
-                  has earned a reputation as one of NCR's high potential senior
-                  secondary schools.
+                  Progressive school. Within a short span, this accredited
+                  school has earned a reputation as one of NCR's high potential
+                  senior secondary schools.
                 </li>
                 <li>
                   We forge ahead with our vision of preparing students to
                   encounter a rapidly changing world by equipping them with
-                  critical thinking skills, a global perspective, and respect for
-                  core values.
+                  critical thinking skills, a global perspective, and respect
+                  for core values.
                 </li>
                 <li>
                   We are committed to a unique learning approach and an
@@ -80,9 +80,9 @@ const AboutUs = () => {
                 <br />
                 <li>
                   The hallmark of JD Global School is the special "Indianness"
-                  curriculum, put in place for inculcating values in students that
-                  are designed to connect to real life and affect the lives of
-                  students. After all, the aim of education is to create good
+                  curriculum, put in place for inculcating values in students
+                  that are designed to connect to real life and affect the lives
+                  of students. After all, the aim of education is to create good
                   human beings.
                 </li>
               </ul>
@@ -95,13 +95,8 @@ const AboutUs = () => {
               className="w-full rounded-lg shadow-md"
             />
           </div>
-         
         </div>
-        <button className="">
-          Read More
-      </button>
       </section>
-      
 
       {/* Counter Section */}
       {/* <div

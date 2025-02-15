@@ -1,84 +1,100 @@
-
-import { MdAttachEmail } from "react-icons/md";
-import { FaHome } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-
+import React from "react";
 
 const Contact = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-8">
-      <div className="max-w-6xl w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
-        {/* Contact Form Section */}
-        <div className="w-full md:w-1/2 p-8">
-          <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
-          <p className="text-gray-600 mb-8">Keep in touch</p>
-
-          <form>
-            <div className="mb-6">
-              <input
-                type="text"
-                id="name"
-                placeholder="Your name"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+    <section id="contact-page" className="py-12 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Contact Form */}
+          <div className="md:col-span-2 bg-white p-6 rounded-lg shadow-lg">
+            <div className="text-center mb-6">
+              <h5 className="text-lg font-semibold">Contact Us</h5>
+              <h2 className="text-2xl font-bold">Keep in touch</h2>
             </div>
-
-            <div className="mb-6">
-              <input
-                type="email"
-                placeholder="Email"
-                id="email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="mb-6">
-              <input
-                type="text"
-                placeholder="Subject"
-                id="subject"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="mb-6">
-              <input
-                type="tel"
-                placeholder="Enter Your No"
-                id="phone"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="mb-6">
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  className="p-3 w-full border rounded"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="p-3 w-full border rounded"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                  className="p-3 w-full border rounded"
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone"
+                  required
+                  className="p-3 w-full border rounded"
+                />
+              </div>
               <textarea
-                id="message"
-                placeholder="Enter your message"
-                rows="4"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                name="message"
+                placeholder="Message"
+                required
+                className="p-3 w-full border rounded"
               ></textarea>
-            </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600"
+              >
+                Send
+              </button>
+            </form>
+          </div>
 
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition duration-300"
-            >
-              Send
-            </button>
-          </form>
-        </div>
-
-        {/* Address Section */}
-        <div className="w-full md:w-1/2 bg-blue-50 p-8 flex flex-col justify-center">
-          <h2 className="text-2xl font-semibold mb-6">Address</h2>
-          <p className="text-gray-700 mb-4">
-            <span><FaHome/></span> 226, Sai Enclave, Nandgram, Opp. KM Residency, Raj Nagar Extn., Ghaziabad-201003
-          </p>
-          <p className="text-gray-700 mb-4"> <span><FaPhoneAlt/></span>Phone: 8882229658</p>
-          <p className="text-gray-700"> <span><MdAttachEmail/></span>Email: jdglobalschool@gmail.com</p>
+          {/* Contact Info */}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h5 className="text-lg font-semibold">Address</h5>
+            <p className="text-gray-600">
+              If you have any further questions, please don’t hesitate to
+              contact us.
+            </p>
+            <ul className="mt-4 space-y-4">
+              <li className="flex items-center space-x-3">
+                <i className="fa fa-home text-blue-500"></i>
+                <p>
+                  Munshi Harpal Singh Colony, Shahpur Bamheta, Lal Kuan,
+                  Ghaziabad.
+                </p>
+              </li>
+              <li className="flex items-center space-x-3">
+                <i className="fa fa-phone text-blue-500"></i>
+                <a
+                  href="tel://9899275937"
+                  className="text-blue-500 hover:underline"
+                >
+                  9899275937
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <i className="fa fa-envelope-o text-blue-500"></i>
+                <a
+                  href="mailto:info@adpsschool.in"
+                  className="text-blue-500 hover:underline"
+                >
+                  info@adpsschool.in
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

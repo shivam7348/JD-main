@@ -37,11 +37,11 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav
-          className={`absolute md:static left-0 right-0 top-full w-full md:w-auto bg-white md:bg-transparent ${
+          className={`absolute md:static left-0 right-24 top-full  md:w-auto bg-white md:bg-transparent ${
             menuOpen ? "block" : "hidden"
           } md:block shadow-lg md:shadow-none`}
         >
-          <ul className="md:flex md:items-center text-sm md:text-base font-semibold divide-y md:divide-y-0 divide-gray-100">
+          <ul className="md:flex md:items-center text-sm md:text-base font-semibold divide-y md:divide-y-0 divide-green-600">
             <NavItem to="/">HOME</NavItem>
 
             {/* About Dropdown */}

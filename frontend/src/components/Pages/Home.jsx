@@ -1,3 +1,4 @@
+import React from "react";
 import AutoSlider from "../Slider/AutoSlider";
 import Slider from "../Slider/Slider";
 import AboutUs from "./About/About";
@@ -14,16 +15,16 @@ function Home() {
     <>
       {/* <AutoSlider/> */}
       {/* <Slider/> */}
-      <CategorySection/>
-      <AboutUs/>
-      <ApplicationSection/>
-      <CourseSection/>
-      <VideoFeatureSection/>
-      <VicePrincipalSection/>
-      <Testimonials/>
-      <Contact/>
+      <CategorySection />
+      <AboutUs />
+      <ApplicationSection />
+      <CourseSection />
+      <VideoFeatureSection />
+      <VicePrincipalSection />
+      <Testimonials />
+      <Contact />
     </>
   );
 }
 
-export default Home
+export default Home;

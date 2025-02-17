@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import AppLayout from "../admin/layout/AppLayout";
 
-const DefaultLayout = React.lazy(() => import("../admin/layout/DefaultLayout"));
 
 const DefaultLayouAdminWithTitle = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ const DefaultLayouAdminWithTitle = () => {
     document.title = title;
   }, [title]);
 
-  return <DefaultLayout />;
+  return <AppLayout />;
 };
 
 export default DefaultLayouAdminWithTitle;

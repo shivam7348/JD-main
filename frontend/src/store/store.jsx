@@ -16,3 +16,4 @@ const jdSchoolStore = configureStore({
 });
 
 export default jdSchoolStore;
+

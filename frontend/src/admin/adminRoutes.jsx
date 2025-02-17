@@ -1,16 +1,39 @@
 import React from "react";
-const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
-const Colors = React.lazy(() => import("./views/theme/colors/Colors"));
+import { Route, BrowserRouter as Router, Routes } from "react-router";
+import AppLayout from "./layout/AppLayout";
+import AuthLayout from "./layout/AuthLayout";
+import SignIn from "./pages/AuthPages/SignIn";
+import SignUp from "./pages/AuthPages/SignUp";
+import Ecommerce from "./pages/Dashboard/ECommerce";
+import NotFound from "./pages/OtherPage/NotFound";
+import UserProfiles from "./pages/UserProfiles";
+import Announcement from "./pages/Announcement";
+import Activity from "./pages/ActivityMain";
 
-const Members = React.lazy(() => import("./views/members/members/Members"));
+export default function AdminRoutes() {
+  return (
+    <>
+      <Router>
+        <Routes>
+          {/* Dashboard Layout */}
+          <Route element={<AppLayout />}>
+            <Route index path="/admin/dashboard" element={<Ecommerce />} />
+            {/* Others Page */}
+            <Route path="/admin/profile" element={<UserProfiles />} />
+            <Route path="/admin/calendar" element={<Activity />} />
+            <Route path="/admin/announcement" element={<Announcement />} />
+          </Route>
 
-const adminRoutes = [
-  { path: "/dashboard", exact: true, name: "Dashboard" },
-  { path: "/dashboard", name: "Dashboard", element: Dashboard },
-  { path: "/theme", name: "Theme", element: Colors, exact: true },
-  { path: "/theme/colors", name: "Colors", element: Colors },
-  { path: "/members", name: "Members", element: Members, exact: true },
-  { path: "/admin/members", name: "Members", element: Members },
-];
+          {/* Auth Layout */}
+          <Route element={<AuthLayout />}>
+            <Route path="/admin/signin" element={<SignIn />} />
+            {/* <Route path="/admin/signup" element={<SignUp />} /> */}
+          </Route>
 
-export default adminRoutes;
+          {/* Fallback Route */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </>
+  );
+}

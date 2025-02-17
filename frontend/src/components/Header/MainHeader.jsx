@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -40,37 +41,64 @@ const Header = () => {
             <NavItem to="/">HOME</NavItem>
 
             {/* About Dropdown */}
-            <NavDropdown title="ABOUT US" items={[
-              { to: "/about/message", label: "DIRECTOR MESSAGE" },
-              { to: "/about/vision", label: "VISION" },
-              { to: "/about/mission", label: "MISSION" }
-            ]} />
+            <NavDropdown
+              title="ABOUT US"
+              items={[
+                { to: "/about/message", label: "DIRECTOR MESSAGE" },
+                { to: "/about/vision", label: "VISION" },
+                { to: "/about/mission", label: "MISSION" },
+              ]}
+            />
 
             <NavItem to="/admission">ADMISSION</NavItem>
 
             {/* Academic Zone Dropdown */}
-            <NavDropdown title="ACADEMIC ZONE" items={[
-              { to: "/academic-zone/activities", label: "ACTIVITIES" },
-              { to: "/academic-zone/annual-planner", label: "ANNUAL PLANNER" },
-              { to: "/academic-zone/exam-schedule", label: "EXAMINATION SCHEDULE" }
-            ]} />
+            <NavDropdown
+              title="ACADEMIC ZONE"
+              items={[
+                { to: "/academic-zone/activities", label: "ACTIVITIES" },
+                {
+                  to: "/academic-zone/annual-planner",
+                  label: "ANNUAL PLANNER",
+                },
+                {
+                  to: "/academic-zone/exam-schedule",
+                  label: "EXAMINATION SCHEDULE",
+                },
+              ]}
+            />
 
             {/* Session Information Dropdown */}
-            <NavDropdown title="SESSION INFORMATION" items={[
-              { to: "/sessioni-info/schooltiming", label: "SCHOOL TIMING" },
-              { to: "/sessioni-info/freeregulation", label: "FREE REGULATION" },
-              { to: "/sessioni-info/rulecode-condt", label: "RULE OF CODE AND CONDUCT" }
-            ]} />
+            <NavDropdown
+              title="SESSION INFORMATION"
+              items={[
+                { to: "/sessioni-info/schooltiming", label: "SCHOOL TIMING" },
+                {
+                  to: "/sessioni-info/freeregulation",
+                  label: "FREE REGULATION",
+                },
+                {
+                  to: "/sessioni-info/rulecode-condt",
+                  label: "RULE OF CODE AND CONDUCT",
+                },
+              ]}
+            />
 
             {/* Infrastructure Dropdown */}
-            <NavDropdown title="INFRASTRUCTURE" items={[
-              { to: "/infrastructure/transport-facilities", label: "TRANSPORT FACILITY" },
-              { to: "/infrastructure/schoolcampus", label: "SCHOOL CAMPUS" },
-              { to: "/infrastructure/laboratory", label: "LABORATORY" },
-              { to: "/infrastructure/smartclasses", label: "SMART CLASSES" },
-              { to: "/infrastructure/library", label: "LIBRARY" },
-              { to: "/infrastructure/sportsground", label: "SPORTS GROUND" }
-            ]} />
+            <NavDropdown
+              title="INFRASTRUCTURE"
+              items={[
+                {
+                  to: "/infrastructure/transport-facilities",
+                  label: "TRANSPORT FACILITY",
+                },
+                { to: "/infrastructure/schoolcampus", label: "SCHOOL CAMPUS" },
+                { to: "/infrastructure/laboratory", label: "LABORATORY" },
+                { to: "/infrastructure/smartclasses", label: "SMART CLASSES" },
+                { to: "/infrastructure/library", label: "LIBRARY" },
+                { to: "/infrastructure/sportsground", label: "SPORTS GROUND" },
+              ]}
+            />
 
             <NavItem to="/gallery">GALLERY</NavItem>
             <NavItem to="/contact">CONTACT</NavItem>

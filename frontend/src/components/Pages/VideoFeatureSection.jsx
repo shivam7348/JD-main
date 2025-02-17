@@ -1,3 +1,4 @@
+import React from "react";
 import { FaPlay, FaFlask, FaBook } from "react-icons/fa";
 
 const VideoFeatureSection = () => {
@@ -37,7 +38,9 @@ const VideoFeatureSection = () => {
           <div className="lg:w-5/12 lg:order-last lg:ml-[8.333%]">
             <div className="feature pt-20">
               <div className="feature-title mb-8">
-                <h3 className="text-3xl font-bold text-black">Our Facilities</h3>
+                <h3 className="text-3xl font-bold text-black">
+                  Our Facilities
+                </h3>
               </div>
               <ul className="space-y-8">
                 {features.map((feature) => (
@@ -61,7 +64,10 @@ const VideoFeatureSection = () => {
           <div className="lg:w-6/12 lg:order-first mt-10 lg:mt-0">
             <div
               className="h-[400px] rounded-lg flex items-center justify-center bg-cover bg-center"
-              style={{ backgroundImage: "url('https://jdglobalschool.in/images/course/cu-2.jpg')" }}
+              style={{
+                backgroundImage:
+                  "url('https://jdglobalschool.in/images/course/cu-2.jpg')",
+              }}
             >
               <p className="text-gray-600 bg-white bg-opacity-70 p-4 rounded-lg">
                 Video or Content Placeholder

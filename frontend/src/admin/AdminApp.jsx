@@ -8,22 +8,17 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { CSpinner } from "@coreui/react";
-import "./scss/style.scss";
 import "react-toastify/dist/ReactToastify.css";
-// import "../index.css";
 import {
   login,
   logout,
   selectCheckAuthentication,
 } from "../store/admin/adminAuthSlice";
+import SignIn from "./pages/AuthPages/SignIn";
+import SignUp from "./pages/AuthPages/SignUp";
+import NotFound from "./pages/OtherPage/NotFound";
 import Layout from "../../Layout";
 import DefaultLayouAdminWithTitle from "../utils/DefaultLayouAdminWithTitle";
-
-const Login = React.lazy(() => import("./views/pages/login/Login"));
-const Register = React.lazy(() => import("./views/pages/register/Register"));
-const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
-const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 
 const AuthWrapper = ({ children }) => {
   const dispatch = useDispatch();
@@ -62,27 +57,13 @@ const AuthWrapper = ({ children }) => {
     setCheckingAuth(false);
   }, [dispatch, navigate, location.pathname]);
 
-  if (checkingAuth) {
-    return (
-      <div className="pt-3 text-center">
-        <CSpinner color="primary" variant="grow" />
-      </div>
-    );
-  }
-
   return isAuthenticated ? children : <Navigate to="/admin/login" />;
 };
 
 const AdminApp = () => {
   return (
     <BrowserRouter>
-      <Suspense
-        fallback={
-          <div className="pt-3 text-center">
-            <CSpinner color="primary" variant="grow" />
-          </div>
-        }
-      >
+      <Suspense fallback={<div className="pt-3 text-center">Loading... </div>}>
         <Routes>
           <Route
             path="/admin"
@@ -102,11 +83,9 @@ const AdminApp = () => {
             }
           />
 
-          <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin/register" element={<Register />} />
-          <Route path="/admin/404" element={<Page404 />} />
-          <Route path="/admin/500" element={<Page500 />} />
-
+          <Route path="/admin/login" element={<SignIn />} />
+          {/* <Route path="/admin/register" element={<SignUp />} /> */}
+          <Route path="/admin/404" element={<NotFound />} />
           <Route path="/admin/*" element={<Navigate to="/admin/404" />} />
 
           <Route path="/" element={<Layout />} />

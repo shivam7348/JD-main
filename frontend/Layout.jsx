@@ -10,10 +10,10 @@ import Header from "./src/components/Header/Header";
 function Layout() {
   return (
     <>
-      {/* <TopHeader /> 
+      <TopHeader /> 
       <MiddleHeader/>
-      <MainHeader /> */}
-      <Header/>
+      <MainHeader />
+      {/* <Header/> */}
 
       <Outlet />
       <Footer/>

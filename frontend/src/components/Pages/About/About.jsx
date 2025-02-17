@@ -1,3 +1,4 @@
+import React from "react";
 
 const AboutUs = () => {
   return (
@@ -42,7 +43,7 @@ const AboutUs = () => {
       </section> */}
 
       {/* About Us */}
-      <section  className="pt-10 pb-6 px-6 lg:px-0">
+      <section className="pt-10 pb-6 px-6 lg:px-0">
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
           <div className="lg:w-2/3 mx-15">
             <div className="section-title mb-8 ">
@@ -86,8 +87,8 @@ const AboutUs = () => {
                   human beings.
                 </li>
                 <button className="bg-yellow-500 rounded py-2 px-2">
-          Read More
-      </button>
+                  Read More
+                </button>
               </ul>
             </div>
           </div>
@@ -97,10 +98,8 @@ const AboutUs = () => {
               alt="About JD Global School"
               className="w-full rounded-lg shadow-md"
             />
-          
           </div>
         </div>
-        
       </section>
 
       {/* Counter Section */}

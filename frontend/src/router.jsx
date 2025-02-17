@@ -1,6 +1,5 @@
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-
-
 import Layout from "../Layout";
 import Contact from "./components/Pages/Contact";
 import Services from "./components/Pages/Services";
@@ -19,17 +18,14 @@ import SessionInformation from "./components/Pages/SessionInformation/SessionInf
 import SchoolTimimng from "./components/Pages/SessionInformation/SchoolTimimng";
 import FreeRegualation from "./components/Pages/SessionInformation/FreeRegualation";
 import Infrastructure from "./components/Pages/InfraStructure/Infrastructure";
-import TransportFacility from "./components/Pages/InfraStructure/SchoolTransport";
+import SchoolTransport from "./components/Pages/InfraStructure/SchoolTransport";
 import SchoolCampus from "./components/Pages/InfraStructure/SchoolCampus";
 import Laboratory from "./components/Pages/InfraStructure/Laboratory";
 import SmartClasses from "./components/Pages/InfraStructure/SmartClasses";
 import SportsGround from "./components/Pages/InfraStructure/SportsGround";
 import Library from "./components/Pages/InfraStructure/Library";
 import RulesAndTransport from "./components/Pages/SessionInformation/RulesAndTransport";
-import AdmissionPage from "./components/Pages/AdmissionPage"
-
-
-
+import AdmissionPage from "./components/Pages/AdmissionPage";
 
 const router = createBrowserRouter([
   {
@@ -57,12 +53,11 @@ const router = createBrowserRouter([
 
       {
         path: "academic-zone",
-        element: <AcademicZone />
+        element: <AcademicZone />,
       },
       {
         path: "admissionopen",
-        element: <AdmissionPage/>
-
+        element: <AdmissionPage />,
       },
       // acdemice nested routes
       { path: "/academic-zone/activities", element: <Activities /> },

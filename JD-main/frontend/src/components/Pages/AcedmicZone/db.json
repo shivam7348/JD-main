@@ -1,0 +1,22 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "title": "Coding Workshop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Learn advanced JavaScript and React.js concepts."
+    },
+    {
+      "id": 2,
+      "title": "Design Thinking",
+      "image": "https://via.placeholder.com/300",
+      "description": "Improve problem-solving with creative strategies."
+    },
+    {
+      "id": 3,
+      "title": "AI & ML Seminar",
+      "image": "https://via.placeholder.com/300",
+      "description": "Explore the future of Artificial Intelligence."
+    }
+  ]
+}

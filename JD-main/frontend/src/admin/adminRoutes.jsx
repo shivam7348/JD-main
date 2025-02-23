@@ -6,9 +6,10 @@ import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import Ecommerce from "./pages/Dashboard/ECommerce";
 import NotFound from "./pages/OtherPage/NotFound";
-import UserProfiles from "./pages/UserProfiles";
 import Announcement from "./pages/Announcement";
 import Activity from "./pages/ActivityMain";
+import Gallery from "./pages/Gallery";
+import AnnualPlanner from "./pages/AnnualPlanner";
 
 export default function AdminRoutes() {
   return (
@@ -19,9 +20,10 @@ export default function AdminRoutes() {
           <Route element={<AppLayout />}>
             <Route index path="/admin/dashboard" element={<Ecommerce />} />
             {/* Others Page */}
-            <Route path="/admin/annualplannerr" element={<UserProfiles />} />
+            <Route path="/admin/annualplannerr" element={<AnnualPlanner />} />
             <Route path="/admin/activity" element={<Activity />} />
             <Route path="/admin/announcement" element={<Announcement />} />
+            <Route path="/admin/gallery" element={<Gallery />} />
           </Route>
 
           {/* Auth Layout */}

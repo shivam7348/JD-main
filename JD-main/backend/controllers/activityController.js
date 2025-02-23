@@ -1,6 +1,4 @@
 import Activity from "../models/ActivityModel.js";
-import mongoose from "mongoose";
-import fs from "fs"; // File system module
 import { supabase } from "../utils/supabase.js";
 
 // Get all activities

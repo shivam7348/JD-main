@@ -5,7 +5,8 @@ import connectDB from "./config/connectDB.js";
 import adminUserRoutes from "./routers/adminUserRoutes.js";
 import adminRoutes from "./routers/adminRoutes.js";
 import activityRoutes from "./routers/activityRoutes.js";
-
+import galleryRoutes from "./routers/galleryRoutes.js";
+import annualPlannerRoutes from "./routers/annualPlannerRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ connectDB();
 app.use("/api/admin", adminUserRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/activity", activityRoutes);
+app.use("/api/gallery", galleryRoutes);
+app.use("/api/annualPlanner", annualPlannerRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -21,6 +21,11 @@ const navItems = [
   },
   {
     icon: <CalenderIcon />,
+    name: "Gallery",
+    path: "/admin/gallery",
+  },
+  {
+    icon: <CalenderIcon />,
     name: "Activities",
     path: "/admin/activity",
   },
